@@ -3367,12 +3367,12 @@ Subclause @ref s822 "8.2.2" presents the lexical grammar for KerML. Subclauses @
 
 **Table 3. Abstract Syntax Synthesis Notation**
 
-| Property assignment         | p = Element                  | Assign the result of parsing the concrete syntax Element to abstract syntax property p.                                                                                                                                             |
-| --------------------------- | ---------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| List property construction  | p += Element                 | Add the result of parsing the concrete syntax Element to the abstract syntax list property p.                                                                                                                                       |
-| Boolean property assignment | p ?= Element                 | If the concrete syntax Element is parsed, then set the abstract Boolean propertypto true.                                                                                                                                           |
-| Non-parsing assignment      | { p = value } { p += value } | Assign (or add) the givenvalueto the abstract syntax property p, without parsing any input.The valuemay be a literal or a reference to another abstract syntax property. The symbol "this" refers to the element being synthesized. |
-| Name resolution             | \[QualifiedName\]            | Parse aQualifiedName, then resolve that name to anElement reference (see 8.2.3.5) for use as a value in an assignment as above.                                                                                                     |
+| Property assignment         | p = Element                  | Assign the result of parsing the concrete syntax Element to abstract syntax property p.                                                                                                                                               |
+| --------------------------- | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| List property construction  | p += Element                 | Add the result of parsing the concrete syntax Element to the abstract syntax list property p.                                                                                                                                         |
+| Boolean property assignment | p ?= Element                 | If the concrete syntax Element is parsed, then set the abstract Boolean propertypto true.                                                                                                                                             |
+| Non-parsing assignment      | { p = value } { p += value } | Assign (or add) the given value to the abstract syntax property p, without parsing any input.The valuemay be a literal or a reference to another abstract syntax property. The symbol "this" refers to the element being synthesized. |
+| Name resolution             | \[QualifiedName\]            | Parse aQualifiedName, then resolve that name to anElement reference (see 8.2.3.5) for use as a value in an assignment as above.                                                                                                       |
 
 ### 8.2.2 Lexical Structure {#s822}
 
@@ -11678,16 +11678,16 @@ The above terms are mathematically defined below.
 
 - A vocabulary $V = (V_T, V_C, V_F)$ is a 3-tuple where:
 
-  - $V_T$ is a set of types (model elements classified by `Type` or its specializations, see @ref s8331 "8.3.3.1").
-  - $V_C \subseteq V_T$ is a set of classifiers (model elements classified by `Classifier` or its specializations, see @ref s8332 "8.3.3.2"), including at least `Base::Anything` from KerML Semantic Model Library (see @ref s922 "9.2.2").
-  - $V_F \subseteq V_T$ is a set of features (model elements classified by `Feature` or its specializations, see @ref s8333 "8.3.3.3"), including at least `Base::things` from the KerML Semantic Model Library (see @ref s922 "9.2.2").
-  - $V_T = V_C \cup V_F$.
+    - $V_T$ is a set of types (model elements classified by `Type` or its specializations, see @ref s8331 "8.3.3.1").
+    - $V_C \subseteq V_T$ is a set of classifiers (model elements classified by `Classifier` or its specializations, see @ref s8332 "8.3.3.2"), including at least `Base::Anything` from KerML Semantic Model Library (see @ref s922 "9.2.2").
+    - $V_F \subseteq V_T$ is a set of features (model elements classified by `Feature` or its specializations, see @ref s8333 "8.3.3.3"), including at least `Base::things` from the KerML Semantic Model Library (see @ref s922 "9.2.2").
+    - $V_T = V_C \cup V_F$.
 
 - An interpretation $I = (\Delta, \Sigma, (\cdot)_T)$ for $V$ is a 3-tuple where:
 
-  - $\Delta$ is a non-empty set (_universe_),
-  - $\Sigma = (P, <_P)$ is a non-empty set $P$ with a strict partial ordering $<_P$ (_marking set_), and
-  - $(\cdot)_T$ is an (_interpretation_) function relating elements of the vocabulary to sets of all non-empty tuples (_sequences_) of elements of the universe, with an element of the marking set in between each one for sequences of multiple elements. It has domain $V_T$ and co-domain that is the power set of $S$:
+    - $\Delta$ is a non-empty set (_universe_),
+    - $\Sigma = (P, <_P)$ is a non-empty set $P$ with a strict partial ordering $<_P$ (_marking set_), and
+    - $(\cdot)_T$ is an (_interpretation_) function relating elements of the vocabulary to sets of all non-empty tuples (_sequences_) of elements of the universe, with an element of the marking set in between each one for sequences of multiple elements. It has domain $V_T$ and co-domain that is the power set of $S$:
 
 $$
 S = \Delta^1 \cup (\Delta \times P \times \Delta) \cup (\Delta \times P \times \Delta \times P \times \Delta) \cup \cdots
@@ -20169,7 +20169,7 @@ Values of abstract syntax properties typed by a metaclass (that is, `Element` or
 
 ```json
 {
-  "id": "15fe7607-ceb8-38bb-bd04-dde8ca657cec"
+    "id": "15fe7607-ceb8-38bb-bd04-dde8ca657cec"
 }
 ```
 
